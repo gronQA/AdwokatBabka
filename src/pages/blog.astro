@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { Calendar, User, ArrowRight } from 'lucide-react';
+
+const posts = [
+	{
+		title: "Nowelizacja kodeksu rodzinnego w 2024 roku - co się zmienia?",
+		slug: "nowelizacja-kodeksu-rodzinnego-2024",
+		excerpt: "Dowiedz się, jakie kluczowe zmiany czekają rodziców i opiekunów po wejściu w życie najnowszych przepisów...",
+		date: "15 maja 2024",
+		author: "Barbara Babka",
+		image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+	},
+	{
+		title: "Jak przygotować się do pierwszej wizyty u adwokata?",
+		slug: "przygotowanie-do-wizyty-u-adwokata",
+		excerpt: "Pierwsze spotkanie z prawnikiem może być stresujące. Przygotowaliśmy listę dokumentów i informacji, które warto zabrać ze sobą...",
+		date: "2 maja 2024",
+		author: "Barbara Babka",
+		image: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+	},
+	{
+		title: "Podział majątku po rozwodzie - najczęstsze błędy",
+		slug: "podzial-majatku-po-rozwodzie",
+		excerpt: "Proces podziału majątku wspólnego jest skomplikowany. Zobacz, na co zwrócić uwagę, aby uniknąć niepotrzebnych sporów...",
+		date: "20 kwietnia 2024",
+		author: "Barbara Babka",
+		image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+	}
+];
+---
+
+<Layout title="Blog Prawniczy">
+	<Header client:load />
+	
+	<main class="pt-48 pb-24">
+		<section class="container mx-auto px-4 mb-20 text-center">
+			<span class="text-brand-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Wiedza i aktualności</span>
+			<h1 class="text-4xl md:text-6xl font-serif text-brand-dark mb-6">Blog Prawniczy</h1>
+			<p class="text-gray-500 max-w-2xl mx-auto font-light text-lg">Dzielimy się naszą wiedzą i doświadczeniem, aby przybliżyć Ci skomplikowany świat przepisów prawa.</p>
+			<div class="h-[1px] w-20 bg-brand-gold mx-auto mt-10"></div>
+		</section>
+
+		<section class="container mx-auto px-4">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+				{posts.map((post) => (
+					<article class="bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col">
+						<a href={`/AdwokatBabka/blog/${post.slug}`} class="aspect-video overflow-hidden">
+							<img 
+								src={post.image} 
+								alt={post.title} 
+								class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+							/>
+						</a>
+						<div class="p-8 flex flex-col flex-grow">
+							<div class="flex items-center gap-4 text-[10px] uppercase tracking-widest text-gray-400 mb-4">
+								<span class="flex items-center gap-1"><Calendar size={12} /> {post.date}</span>
+								<span class="flex items-center gap-1"><User size={12} /> {post.author}</span>
+							</div>
+							<a href={`/AdwokatBabka/blog/${post.slug}`}>
+								<h3 class="text-xl font-serif text-brand-dark mb-4 leading-snug group-hover:text-brand-gold transition-colors">{post.title}</h3>
+							</a>
+							<p class="text-gray-600 text-sm font-light mb-8 leading-relaxed flex-grow">{post.excerpt}</p>
+							<a href={`/AdwokatBabka/blog/${post.slug}`} class="text-brand-gold text-xs uppercase tracking-widest font-bold flex items-center group-hover:translate-x-2 transition-transform">
+								Czytaj więcej <ArrowRight size={14} className="ml-2" />
+							</a>
+						</div>
+					</article>
+				))}
+			</div>
+
+			{/* <div class="mt-20 text-center">
+				<button class="border border-brand-dark text-brand-dark px-10 py-4 uppercase text-xs tracking-widest font-bold hover:bg-brand-dark hover:text-white transition-all duration-300">
+					Starsze wpisy
+				</button>
+			</div> */}
+		</section>
+	</main>
+
+	<Footer client:load />
+</Layout>

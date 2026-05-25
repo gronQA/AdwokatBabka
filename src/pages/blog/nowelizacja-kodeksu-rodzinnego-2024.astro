@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { Calendar, User, ArrowLeft } from 'lucide-react';
+
+const post = {
+	title: "Nowelizacja kodeksu rodzinnego w 2024 roku - co się zmienia?",
+	date: "15 maja 2024",
+	author: "Barbara Babka",
+	image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+};
+---
+
+<Layout title={post.title}>
+	<Header client:load />
+	
+	<main class="pt-48 pb-24">
+		<article class="container mx-auto px-4 max-w-4xl">
+			<a href="/AdwokatBabka/blog" class="inline-flex items-center gap-2 text-brand-gold text-xs uppercase tracking-widest font-bold mb-8 hover:translate-x-[-4px] transition-transform">
+				<ArrowLeft size={16} /> Powrót do bloga
+			</a>
+			
+			<header class="mb-12">
+				<div class="flex items-center gap-4 text-xs uppercase tracking-widest text-gray-400 mb-6">
+					<span class="flex items-center gap-1"><Calendar size={14} /> {post.date}</span>
+					<span class="flex items-center gap-1"><User size={14} /> {post.author}</span>
+				</div>
+				<h1 class="text-4xl md:text-6xl font-serif text-brand-dark leading-tight mb-8">{post.title}</h1>
+				<div class="aspect-video overflow-hidden shadow-2xl">
+					<img src={post.image} alt={post.title} class="w-full h-full object-cover" />
+				</div>
+			</header>
+
+			<div class="prose prose-lg prose-brand max-w-none text-gray-700 font-light leading-relaxed space-y-8">
+				<p class="text-xl italic text-gray-500 border-l-4 border-brand-gold pl-6 py-2">
+					Rok 2024 przynosi istotne zmiany w Kodeksie rodzinnym i opiekuńczym. Nowelizacja ma na celu przede wszystkim wzmocnienie ochrony praw dziecka oraz usprawnienie postępowań w sprawach rodzinnych.
+				</p>
+
+				<h2 class="text-2xl font-serif text-brand-dark mt-12 mb-6">Główne założenia nowelizacji</h2>
+				<p>
+					Jedną z najważniejszych zmian jest wprowadzenie standardów ochrony małoletnich we wszystkich instytucjach pracujących z dziećmi. Oznacza to, że każda placówka oświatowa, opiekuńcza czy sportowa musi posiadać jasne procedury postępowania w przypadku podejrzenia krzywdzenia dziecka.
+				</p>
+
+				<h2 class="text-2xl font-serif text-brand-dark mt-12 mb-6">Wysłuchanie dziecka</h2>
+				<p>
+					Nowe przepisy kładą jeszcze większy nacisk na prawo dziecka do bycia wysłuchanym w toku postępowania sądowego. Sąd ma obowiązek zapewnić dziecku odpowiednie warunki do wyrażenia swojej opinii, biorąc pod uwagę jego stopień dojrzałości oraz stan zdrowia.
+				</p>
+
+				<h2 class="text-2xl font-serif text-brand-dark mt-12 mb-6">Reprezentant dziecka</h2>
+				<p>
+					Wprowadzono instytucję reprezentanta dziecka w procesie karnym. Zamiast dotychczasowego kuratora, dziecko będzie reprezentowane przez profesjonalnego pełnomocnika (adwokata lub radcę prawnego), co ma zagwarantować realną ochronę jego praw przed organami ścigania i sądem.
+				</p>
+
+				<blockquote class="bg-gray-50 p-8 border border-gray-100 italic rounded-sm">
+					"Zmiany te są krokiem w stronę cywilizowanego społeczeństwa, w którym podmiotowość dziecka nie jest tylko pustym hasłem, ale realnie chronionym interesem prawnym."
+				</blockquote>
+
+				<p>
+					Jeśli potrzebują Państwo szczegółowej analizy swojej sytuacji prawnej w kontekście nadchodzących zmian, zapraszamy do kontaktu z naszą kancelarią. Pomożemy przejść przez skomplikowane procedury i zapewnimy wsparcie na każdym etapie postępowania.
+				</p>
+			</div>
+		</article>
+	</main>
+
+	<Footer client:load />
+</Layout>

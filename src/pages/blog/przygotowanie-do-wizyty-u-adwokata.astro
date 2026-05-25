@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { Calendar, User, ArrowLeft } from 'lucide-react';
+
+const post = {
+	title: "Jak przygotować się do pierwszej wizyty u adwokata?",
+	date: "2 maja 2024",
+	author: "Barbara Babka",
+	image: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+};
+---
+
+<Layout title={post.title}>
+	<Header client:load />
+	
+	<main class="pt-48 pb-24">
+		<article class="container mx-auto px-4 max-w-4xl">
+			<a href="/AdwokatBabka/blog" class="inline-flex items-center gap-2 text-brand-gold text-xs uppercase tracking-widest font-bold mb-8 hover:translate-x-[-4px] transition-transform">
+				<ArrowLeft size={16} /> Powrót do bloga
+			</a>
+			
+			<header class="mb-12">
+				<div class="flex items-center gap-4 text-xs uppercase tracking-widest text-gray-400 mb-6">
+					<span class="flex items-center gap-1"><Calendar size={14} /> {post.date}</span>
+					<span class="flex items-center gap-1"><User size={14} /> {post.author}</span>
+				</div>
+				<h1 class="text-4xl md:text-6xl font-serif text-brand-dark leading-tight mb-8">{post.title}</h1>
+				<div class="aspect-video overflow-hidden shadow-2xl">
+					<img src={post.image} alt={post.title} class="w-full h-full object-cover" />
+				</div>
+			</header>
+
+			<div class="prose prose-lg prose-brand max-w-none text-gray-700 font-light leading-relaxed space-y-8">
+				<p class="text-xl italic text-gray-500 border-l-4 border-brand-gold pl-6 py-2">
+					Pierwsza wizyta w kancelarii adwokackiej często wiąże się z dużym stresem. Odpowiednie przygotowanie pozwoli na efektywne wykorzystanie czasu i rzetelną ocenę Państwa sytuacji prawnej.
+				</p>
+
+				<h2 class="text-2xl font-serif text-brand-dark mt-12 mb-6">1. Spisz fakty i chronologię</h2>
+				<p>
+					Zanim udasz się na spotkanie, spróbuj spisać najważniejsze fakty związane ze sprawą. Dobrym pomysłem jest przygotowanie krótkiej osi czasu – co i kiedy się wydarzyło. Dzięki temu adwokat szybciej zrozumie istotę problemu, a Ty nie zapomnisz o żadnym ważnym szczególe pod wpływem emocji.
+				</p>
+
+				<h2 class="text-2xl font-serif text-brand-dark mt-12 mb-6">2. Skompletuj dokumentację</h2>
+				<p>
+					Zabierz ze sobą wszystkie dokumenty, które mogą mieć związek ze sprawą. Mogą to być umowy, pisma z urzędów, orzeczenia sądowe, akta notarialne czy korespondencja mailowa. Nawet jeśli wydaje Ci się, że dany dokument jest mało istotny, lepiej mieć go przy sobie do wglądu.
+				</p>
+
+				<h2 class="text-2xl font-serif text-brand-dark mt-12 mb-6">3. Przygotuj listę pytań</h2>
+				<p>
+					W trakcie konsultacji poruszanych jest wiele wątków. Zapisanie pytań na kartce zagwarantuje, że uzyskasz odpowiedzi na wszystkie nurtujące Cię kwestie. Nie krępuj się pytać o rzeczy, które wydają Ci się niejasne – rolą adwokata jest wytłumaczenie skomplikowanych przepisów w przystępny sposób.
+				</p>
+
+				<h2 class="text-2xl font-serif text-brand-dark mt-12 mb-6">4. Określ swój cel</h2>
+				<p>
+					Zastanów się, jaki rezultat chciałbyś osiągnąć. Czy zależy Ci na szybkim porozumieniu, czy na dochodzeniu swoich praw przed sądem? Jasne określenie celu ułatwi adwokatowi zaproponowanie najskuteczniejszej strategii działania.
+				</p>
+
+				<blockquote class="bg-gray-50 p-8 border border-gray-100 italic rounded-sm">
+					"Dobra komunikacja między klientem a adwokatem to połowa sukcesu w każdej sprawie prawnej."
+				</blockquote>
+
+				<p>
+					Pamiętaj, że adwokata obowiązuje ścisła tajemnica zawodowa. Wszystko, co powiesz podczas spotkania, pozostaje między Tobą a prawnikiem. Szczerość jest kluczowa dla budowania skutecznej linii obrony lub strategii procesowej.
+				</p>
+			</div>
+		</article>
+	</main>
+
+	<Footer client:load />
+</Layout>

@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Kancelaria Adwokacka Barbara Babka - Profesjonalna pomoc prawna w eleganckim wydaniu." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | Kancelaria Adwokacka Barbara Babka</title>
+	</head>
+	<body class="min-h-screen flex flex-col">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--brand-dark: #043624;
+		--brand-gold: #C99655;
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+</style>

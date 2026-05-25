@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { CheckCircle2, FileText, Scale, MessageCircle } from 'lucide-react';
+---
+
+<Layout title="Zasady Współpracy">
+	<Header client:load />
+	
+	<main class="pt-48 pb-24">
+		<!-- Hero -->
+		<section class="container mx-auto px-4 mb-20 text-center">
+			<span class="text-brand-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Przejrzystość</span>
+			<h1 class="text-4xl md:text-6xl font-serif text-brand-dark mb-6">Zasady współpracy</h1>
+			<p class="text-gray-500 max-w-2xl mx-auto font-light text-lg">Wierzymy, że jasne zasady są podstawą sukcesu. Dowiedz się, jak wygląda proces pracy w naszej kancelarii.</p>
+			<div class="h-[1px] w-20 bg-brand-gold mx-auto mt-10"></div>
+		</section>
+
+		<!-- Process Steps -->
+		<section class="container mx-auto px-4 mb-24">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-16">
+				<div class="flex gap-8 group">
+					<div class="shrink-0 w-16 h-16 bg-brand-dark text-brand-gold flex items-center justify-center font-serif text-2xl group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-500">01</div>
+					<div>
+						<h3 class="text-2xl font-serif text-brand-dark mb-4">Pierwsza konsultacja</h3>
+						<p class="text-gray-600 font-light leading-relaxed">Podczas pierwszego spotkania (osobistego lub online) analizujemy stan faktyczny Twojej sprawy oraz Twoje oczekiwania. To moment na przedstawienie dokumentacji i wstępną ocenę prawną.</p>
+					</div>
+				</div>
+
+				<div class="flex gap-8 group">
+					<div class="shrink-0 w-16 h-16 bg-brand-dark text-brand-gold flex items-center justify-center font-serif text-2xl group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-500">02</div>
+					<div>
+						<h3 class="text-2xl font-serif text-brand-dark mb-4">Analiza i Strategia</h3>
+						<p class="text-gray-600 font-light leading-relaxed">Po zebraniu wszystkich informacji dokonujemy szczegółowej analizy prawnej i przygotowujemy strategię działania. Przedstawiamy możliwe scenariusze oraz ryzyka.</p>
+					</div>
+				</div>
+
+				<div class="flex gap-8 group">
+					<div class="shrink-0 w-16 h-16 bg-brand-dark text-brand-gold flex items-center justify-center font-serif text-2xl group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-500">03</div>
+					<div>
+						<h3 class="text-2xl font-serif text-brand-dark mb-4">Ustalenie wynagrodzenia</h3>
+						<p class="text-gray-600 font-light leading-relaxed">Stosujemy przejrzyste modele rozliczeń: ryczałtowe, godzinowe lub z elementem "success fee". Każdorazowo wysokość wynagrodzenia jest ustalana przed podjęciem działań.</p>
+					</div>
+				</div>
+
+				<div class="flex gap-8 group">
+					<div class="shrink-0 w-16 h-16 bg-brand-dark text-brand-gold flex items-center justify-center font-serif text-2xl group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-500">04</div>
+					<div>
+						<h3 class="text-2xl font-serif text-brand-dark mb-4">Realizacja i Kontakt</h3>
+						<p class="text-gray-600 font-light leading-relaxed">Przystępujemy do realizacji ustalonej strategii. Pozostajemy w stałym kontakcie, informując o postępach w sprawie i kolejnych krokach postępowania.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Us -->
+		<section class="bg-brand-dark py-20 text-white">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<div class="flex items-center gap-4">
+						<CheckCircle2 className="text-brand-gold" size={24} />
+						<span class="text-sm tracking-widest uppercase font-light">Pełna dyskrecja</span>
+					</div>
+					<div class="flex items-center gap-4">
+						<FileText className="text-brand-gold" size={24} />
+						<span class="text-sm tracking-widest uppercase font-light">Jasne raportowanie</span>
+					</div>
+					<div class="flex items-center gap-4">
+						<Scale className="text-brand-gold" size={24} />
+						<span class="text-sm tracking-widest uppercase font-light">Etyka adwokacka</span>
+					</div>
+					<div class="flex items-center gap-4">
+						<MessageCircle className="text-brand-gold" size={24} />
+						<span class="text-sm tracking-widest uppercase font-light">Szybki kontakt</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer client:load />
+</Layout>

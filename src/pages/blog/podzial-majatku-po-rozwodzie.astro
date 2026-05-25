@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { Calendar, User, ArrowLeft } from 'lucide-react';
+
+const post = {
+	title: "Podział majątku po rozwodzie - najczęstsze błędy",
+	date: "20 kwietnia 2024",
+	author: "Barbara Babka",
+	image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+};
+---
+
+<Layout title={post.title}>
+	<Header client:load />
+	
+	<main class="pt-48 pb-24">
+		<article class="container mx-auto px-4 max-w-4xl">
+			<a href="/AdwokatBabka/blog" class="inline-flex items-center gap-2 text-brand-gold text-xs uppercase tracking-widest font-bold mb-8 hover:translate-x-[-4px] transition-transform">
+				<ArrowLeft size={16} /> Powrót do bloga
+			</a>
+			
+			<header class="mb-12">
+				<div class="flex items-center gap-4 text-xs uppercase tracking-widest text-gray-400 mb-6">
+					<span class="flex items-center gap-1"><Calendar size={14} /> {post.date}</span>
+					<span class="flex items-center gap-1"><User size={14} /> {post.author}</span>
+				</div>
+				<h1 class="text-4xl md:text-6xl font-serif text-brand-dark leading-tight mb-8">{post.title}</h1>
+				<div class="aspect-video overflow-hidden shadow-2xl">
+					<img src={post.image} alt={post.title} class="w-full h-full object-cover" />
+				</div>
+			</header>
+
+			<div class="prose prose-lg prose-brand max-w-none text-gray-700 font-light leading-relaxed space-y-8">
+				<p class="text-xl italic text-gray-500 border-l-4 border-brand-gold pl-6 py-2">
+					Podział majątku wspólnego to jeden z najbardziej newralgicznych etapów rozstania małżonków. Błędy popełnione na tym etapie mogą mieć skutki finansowe odczuwalne przez lata.
+				</p>
+
+				<h2 class="text-2xl font-serif text-brand-dark mt-12 mb-6">Majątek wspólny a majątek osobisty</h2>
+				<p>
+					Najczęstszym błędem jest błędne zakwalifikowanie składników majątkowych. Warto pamiętać, że przedmioty nabyte przed ślubem, a także te otrzymane w drodze darowizny lub spadku (o ile darczyńca nie postanowił inaczej), stanowią majątek osobisty małżonka i nie podlegają podziałowi.
+				</p>
+
+				<h2 class="text-2xl font-serif text-brand-dark mt-12 mb-6">Nierówne udziały w majątku</h2>
+				<p>
+					Zasada mówi, że małżonkowie mają równe udziały w majątku wspólnym. Jednak w uzasadnionych przypadkach, gdy jeden z małżonków w rażący sposób nie przyczyniał się do powstania majątku, można żądać ustalenia nierównych udziałów. Jest to proces trudny dowodowo, ale w pewnych sytuacjach niezbędny dla zachowania sprawiedliwości.
+				</p>
+
+				<h2 class="text-2xl font-serif text-brand-dark mt-12 mb-6">Nakłady z majątku osobistego na wspólny</h2>
+				<p>
+					Często zapominamy o rozliczeniu nakładów. Jeśli np. remont wspólnego mieszkania został sfinansowany z pieniędzy, które jeden z małżonków otrzymał w spadku, ma on prawo żądać zwrotu tych środków przy podziale majątku. Precyzyjne udokumentowanie takich przepływów pieniężnych jest kluczowe.
+				</p>
+
+				<h2 class="text-2xl font-serif text-brand-dark mt-12 mb-6">Kiedy dokonać podziału?</h2>
+				<p>
+					Podziału majątku można dokonać polubownie u notariusza (nawet w trakcie trwania małżeństwa po ustanowieniu rozdzielności) lub na drodze sądowej. Wybór drogi zależy od stopnia porozumienia między stronami oraz złożoności składników majątkowych.
+				</p>
+
+				<blockquote class="bg-gray-50 p-8 border border-gray-100 italic rounded-sm">
+					"Emocje są złym doradcą przy podziale majątku. Chłodna analiza prawna pozwala uniknąć kosztownych pomyłek."
+				</blockquote>
+
+				<p>
+					Nasza kancelaria specjalizuje się w sprawach o podział majątku, oferując wsparcie zarówno w negocjacjach ugodowych, jak i w reprezentacji przed sądem. Pomożemy rzetelnie wycenić składniki majątku i zadbamy o to, aby proces ten przebiegł w sposób sprawiedliwy.
+				</p>
+			</div>
+		</article>
+	</main>
+
+	<Footer client:load />
+</Layout>
