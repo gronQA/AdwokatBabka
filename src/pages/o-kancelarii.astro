@@ -8,7 +8,7 @@ import { Shield, Award, Users, Scale, BookOpen, HeartPulse } from 'lucide-react'
 <Layout title="O Kancelarii">
 	<Header client:load />
 	
-	<main class="pt-48 pb-24">
+	<main class="pt-48 pb-0">
 		<!-- Intro Section -->
 		<section class="container mx-auto px-4 mb-32">
 			<div class="max-w-4xl mx-auto text-center mb-16">
@@ -93,27 +93,43 @@ import { Shield, Award, Users, Scale, BookOpen, HeartPulse } from 'lucide-react'
 		</section>
 
 		<!-- Values -->
-		<section class="bg-brand-dark py-24 text-white">
-			<div class="container mx-auto px-4">
+		<section class="bg-brand-dark py-24 text-white relative overflow-hidden">
+			<!-- Subtle Background Image -->
+			<div class="absolute inset-0 z-0">
+				<img 
+					src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+					alt="Tło Prawnicze - Dokumenty" 
+					class="w-full h-full object-cover opacity-15"
+				/>
+				<div class="absolute inset-0 bg-brand-dark/40"></div>
+			</div>
+
+			<div class="container mx-auto px-4 relative z-10">
 				<div class="text-center mb-16">
 					<h2 class="text-4xl font-serif mb-4">Wartości, którymi się kierujemy</h2>
 					<div class="h-[1px] w-20 bg-brand-gold mx-auto"></div>
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-					<div class="text-center">
-						<Shield className="text-brand-gold mx-auto mb-6" size={40} />
-						<h3 class="text-xl font-serif mb-4">Etyka zawodowa</h3>
-						<p class="text-gray-400 font-light text-sm">Niezależność, zachowanie tajemnicy adwokackiej oraz przestrzeganie zasad etyki są fundamentem naszej pracy.</p>
+					<div class="flex flex-col items-center text-center gap-4">
+						<div class="w-12 h-12 rounded-full border border-brand-gold/30 flex items-center justify-center mb-2">
+							<Shield className="text-brand-gold" size={24} />
+						</div>
+						<h3 class="text-xs tracking-[0.2em] uppercase font-bold text-brand-gold">Etyka zawodowa</h3>
+						<p class="text-gray-400 text-[10px] uppercase tracking-widest leading-relaxed">Niezależność, zachowanie tajemnicy adwokackiej oraz przestrzeganie zasad etyki są fundamentem naszej pracy.</p>
 					</div>
-					<div class="text-center">
-						<Award className="text-brand-gold mx-auto mb-6" size={40} />
-						<h3 class="text-xl font-serif mb-4">Najwyższa jakość</h3>
-						<p class="text-gray-400 font-light text-sm">Nieustannie podnosimy nasze kwalifikacje, aby sprostać dynamicznie zmieniającym się przepisom prawa.</p>
+					<div class="flex flex-col items-center text-center gap-4">
+						<div class="w-12 h-12 rounded-full border border-brand-gold/30 flex items-center justify-center mb-2">
+							<Award className="text-brand-gold" size={24} />
+						</div>
+						<h3 class="text-xs tracking-[0.2em] uppercase font-bold text-brand-gold">Najwyższa jakość</h3>
+						<p class="text-gray-400 text-[10px] uppercase tracking-widest leading-relaxed">Nieustannie podnosimy nasze kwalifikacje, aby sprostać dynamicznie zmieniającym się przepisom prawa.</p>
 					</div>
-					<div class="text-center">
-						<Users className="text-brand-gold mx-auto mb-6" size={40} />
-						<h3 class="text-xl font-serif mb-4">Relacja z Klientem</h3>
-						<p class="text-gray-400 font-light text-sm">Podstawą naszej współpracy jest wzajemne zaufanie, dyskrecja oraz jasna komunikacja na każdym etapie.</p>
+					<div class="flex flex-col items-center text-center gap-4">
+						<div class="w-12 h-12 rounded-full border border-brand-gold/30 flex items-center justify-center mb-2">
+							<Users className="text-brand-gold" size={24} />
+						</div>
+						<h3 class="text-xs tracking-[0.2em] uppercase font-bold text-brand-gold">Relacja z Klientem</h3>
+						<p class="text-gray-400 text-[10px] uppercase tracking-widest leading-relaxed">Podstawą naszej współpracy jest wzajemne zaufanie, dyskrecja oraz jasna komunikacja na każdym etapie.</p>
 					</div>
 				</div>
 			</div>
