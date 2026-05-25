@@ -20,10 +20,10 @@ const Header = ({ isTransparent = false }: HeaderProps) => {
   }, []);
 
   const navLinks = [
-    { name: 'O Kancelarii', href: '/AdwokatBabka/o-kancelarii' },
-    { name: 'Specjalizacje', href: '/AdwokatBabka/#specjalizacje' },
-    { name: 'Zasady współpracy', href: '/AdwokatBabka/zasady-wspolpracy' },
-    { name: 'Blog', href: '/AdwokatBabka/blog' },
+    { name: 'O Kancelarii', href: '/BGLex/o-kancelarii' },
+    { name: 'Specjalizacje', href: '/BGLex/#specjalizacje' },
+    { name: 'Zasady współpracy', href: '/BGLex/zasady-wspolpracy' },
+    { name: 'Blog', href: '/BGLex/blog' },
   ];
 
   return (
@@ -33,7 +33,7 @@ const Header = ({ isTransparent = false }: HeaderProps) => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
-        <a href="/AdwokatBabka/" className="hover:opacity-90 transition-opacity">
+        <a href="/BGLex/" className="hover:opacity-90 transition-opacity">
           <Logo />
         </a>
 
@@ -50,7 +50,7 @@ const Header = ({ isTransparent = false }: HeaderProps) => {
             </a>
           ))}
           <a 
-            href="/AdwokatBabka/#kontakt" 
+            href="/BGLex/#kontakt" 
             className="border border-brand-gold text-brand-gold px-6 py-2 uppercase text-[10px] tracking-[0.2em] hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 text-center"
           >
             Umów spotkanie
@@ -87,7 +87,7 @@ const Header = ({ isTransparent = false }: HeaderProps) => {
                 </a>
               ))}
               <a 
-                href="/AdwokatBabka/#kontakt" 
+                href="/BGLex/#kontakt" 
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="bg-brand-gold text-brand-dark text-center py-3 uppercase text-xs tracking-[0.2em] font-bold"
               >

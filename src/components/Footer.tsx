@@ -10,9 +10,9 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Logo & About */}
-          <div className="md:col-span-1">
+          <div className="md:col-span-1 flex flex-col items-center md:items-start">
             <Logo />
-            <p className="mt-6 text-gray-300 text-sm leading-relaxed font-light italic">
+            <p className="mt-6 text-gray-300 text-sm leading-relaxed font-light italic text-center md:text-left">
               Profesjonalna pomoc prawna oparta na zaufaniu i wieloletnim doświadczeniu. Zapraszamy do kontaktu.
             </p>
           </div>
@@ -22,10 +22,10 @@ const Footer = () => {
             <h4 className="text-brand-gold uppercase text-sm tracking-[0.2em] mb-6 font-bold">Na skróty</h4>
             <ul className="space-y-4">
               {[
-                { name: 'O Kancelarii', href: '/AdwokatBabka/o-kancelarii' },
-                { name: 'Specjalizacje', href: '/AdwokatBabka/#specjalizacje' },
-                { name: 'Zasady współpracy', href: '/AdwokatBabka/zasady-wspolpracy' },
-                { name: 'Blog', href: '/AdwokatBabka/blog' }
+                { name: 'O Kancelarii', href: '/BGLex/o-kancelarii' },
+                { name: 'Specjalizacje', href: '/BGLex/#specjalizacje' },
+                { name: 'Zasady współpracy', href: '/BGLex/zasady-wspolpracy' },
+                { name: 'Blog', href: '/BGLex/blog' }
               ].map((link) => (
                 <li key={link.name}>
                   <a 
@@ -46,15 +46,15 @@ const Footer = () => {
             <ul className="space-y-4 text-sm text-gray-300">
               <li className="flex items-start gap-3 group">
                 <Phone size={18} className="text-brand-gold shrink-0 mt-0.5" />
-                <a href="tel:+48123456789" className="hover:text-brand-gold transition-colors">+48 123 456 789</a>
+                <a href="tel:+48507771073" className="hover:text-brand-gold transition-colors">+48 507 771 073</a>
               </li>
               <li className="flex items-start gap-3 group">
                 <Mail size={18} className="text-brand-gold shrink-0 mt-0.5" />
-                <a href="mailto:kancelaria@adwokat-babka.pl" className="hover:text-brand-gold transition-colors">kancelaria@adwokat-babka.pl</a>
+                <a href="mailto:adwokat.barbara.babka@gmail.com" className="hover:text-brand-gold transition-colors">adwokat.barbara.babka@gmail.com</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-brand-gold shrink-0 mt-0.5" />
-                <span>ul. Przykładowa 12/3<br />00-001 Warszawa</span>
+                <span>ul. Mikołaja Kopernika 12/7<br />40-064 Katowice</span>
               </li>
             </ul>
           </div>
@@ -81,10 +81,10 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-brand-gold/10 flex flex-col md:row justify-between items-center gap-4">
           <p className="text-xs text-gray-500">
-            © {currentYear} Kancelaria Adwokacka Barbara Babka. Wszelkie prawa zastrzeżone.
+            © {currentYear} BG LEX Kancelaria Adwokacka. Wszelkie prawa zastrzeżone.
           </p>
           <div className="flex gap-6 text-[10px] text-gray-500 uppercase tracking-widest">
-            <a href="/AdwokatBabka/polityka-prywatnosci" className="hover:text-brand-gold transition-colors">Polityka prywatności</a>
+            <a href="/BGLex/polityka-prywatnosci" className="hover:text-brand-gold transition-colors">Polityka prywatności</a>
             <a href="https://gronqa.pl" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors font-bold">Strona stworzona przez gronqa.pl</a>
           </div>
         </div>

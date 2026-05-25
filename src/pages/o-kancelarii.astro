@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Shield, Award, Users } from 'lucide-react';
+import { Shield, Award, Users, Scale, BookOpen, HeartPulse } from 'lucide-react';
 ---
 
 <Layout title="O Kancelarii">
@@ -10,55 +10,110 @@ import { Shield, Award, Users } from 'lucide-react';
 	
 	<main class="pt-48 pb-24">
 		<!-- Intro Section -->
-		<section class="container mx-auto px-4 mb-24">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-				<div>
-					<span class="text-brand-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Poznaj nas</span>
-					<h1 class="text-4xl md:text-6xl font-serif text-brand-dark mb-8 leading-tight">O Kancelarii</h1>
-					<div class="h-[1px] w-20 bg-brand-gold mb-8"></div>
-					<div class="prose prose-lg text-gray-600 font-light leading-relaxed space-y-6">
-						<p>
-							Kancelaria Adwokacka Barbara Babka to miejsce, w którym profesjonalizm łączy się z indywidualnym podejściem do każdego klienta. Naszą misją jest świadczenie usług prawnych na najwyższym poziomie, dbając o bezpieczeństwo i interesy osób, które nam zaufały.
-						</p>
-						<p>
-							Wierzymy, że skuteczna pomoc prawna wymaga nie tylko doskonałej znajomości przepisów, ale także empatii i pełnego zaangażowania. Każda sprawa jest dla nas wyjątkowa, dlatego szukamy rozwiązań szytych na miarę.
-						</p>
+		<section class="container mx-auto px-4 mb-32">
+			<div class="max-w-4xl mx-auto text-center mb-16">
+				<span class="text-brand-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Poznaj nas</span>
+				<h1 class="text-4xl md:text-6xl font-serif text-brand-dark mb-8 leading-tight">O Kancelarii</h1>
+				<div class="h-[1px] w-20 bg-brand-gold mx-auto mb-8"></div>
+				<p class="text-xl text-gray-600 font-light leading-relaxed">
+					BG LEX Kancelaria Adwokacka to miejsce, w którym profesjonalizm łączy się z indywidualnym podejściem do każdego klienta. Naszą misją jest świadczenie usług prawnych na najwyższym poziomie, dbając o bezpieczeństwo i interesy osób, które nam zaufały.
+				</p>
+			</div>
+
+			<!-- Team Section -->
+			<div class="space-y-32">
+				<!-- Barbara Babka -->
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+					<div class="relative order-2 lg:order-1">
+						<div class="aspect-[4/5] bg-brand-dark overflow-hidden shadow-2xl border border-brand-gold/20">
+							<img 
+								src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+								alt="Adwokat Barbara Babka" 
+								class="w-full h-full object-cover opacity-90"
+							/>
+						</div>
+						<div class="absolute -bottom-6 -right-6 bg-brand-gold p-8 hidden md:block shadow-xl">
+							<span class="text-brand-dark font-serif text-2xl block italic leading-none">Barbara Babka</span>
+							<span class="text-brand-dark uppercase tracking-widest text-[10px] font-bold">Kancelaria Adwokacka</span>
+						</div>
+					</div>
+					<div class="order-1 lg:order-2">
+						<h2 class="text-3xl font-serif text-brand-dark mb-6">Barbara Babka</h2>
+						<div class="prose prose-brand text-gray-600 font-light leading-relaxed space-y-4">
+							<p>
+								Absolwentka Wydziału Prawa i Administracji Uniwersytetu Śląskiego w Katowicach, gdzie w 2011 roku ukończyłam studia na kierunku prawo, a także Wydziału Nauk Społecznych na kierunku politologia ze specjalizacją samorządową. Ukończyłam również studia podyplomowe z zakresu strategii podatkowych na Uniwersytecie Ekonomicznym w Katowicach. W 2018 roku uzyskałam pozytywny wynik egzaminu adwokackiego.
+							</p>
+							<p>
+								Reprezentuję zarówno klientów indywidualnych, jak i przedsiębiorców. W praktyce zawodowej koncentruję się na sprawach karnych, w tym dotyczących przestępczości zorganizowanej, a także na sprawach rodzinnych, obejmujących w szczególności regulowanie kontaktów z dziećmi (w tym przeciwdziałanie tzw. alienacji rodzicielskiej), kształtowanie władzy rodzicielskiej oraz ustalanie wysokości alimentów, jak również na sprawach o rozwód, w tym w postępowaniach o szczególnie złożonym charakterze, z orzekaniem o winie.
+							</p>
+							<p>
+								Istotny obszar mojej działalności stanowią również sprawy cywilne, w szczególności dotyczące spadków, podziału majątku, regulowania stanu prawnego nieruchomości, w tym zniesienia współwłasności, sprawy mieszkaniowe, ochrony dóbr osobistych oraz roszczeń o odszkodowanie i zadośćuczynienie.
+							</p>
+							<p>
+								Prowadzę także sprawy gospodarcze oraz z zakresu prawa pracy, w szczególności obejmujące opracowywanie i opiniowanie regulaminów pracy, regulaminów wynagradzania oraz innych wewnętrznych aktów prawa pracy obowiązujących w przedsiębiorstwach.
+							</p>
+							<p>
+								Doświadczenie zawodowe pozwala mi świadczyć kompleksową pomoc prawną zarówno na etapie doradztwa, jak i w postępowaniach przed organami ścigania, sądami powszechnymi oraz Sądem Najwyższym.
+							</p>
+						</div>
 					</div>
 				</div>
-				<div class="relative">
-					<div class="aspect-[4/5] bg-brand-dark overflow-hidden shadow-2xl">
-						<img 
-							src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-							alt="Adwokat Barbara Babka" 
-							class="w-full h-full object-cover opacity-80"
-						/>
+
+				<!-- Klaudiusz Gamza -->
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+					<div class="">
+						<h2 class="text-3xl font-serif text-brand-dark mb-6">Klaudiusz Gamza</h2>
+						<div class="prose prose-brand text-gray-600 font-light leading-relaxed space-y-4">
+							<p>
+								Absolwent jednolitych studiów magisterskich na kierunku prawo na Wydziale Nauk Społecznych i Humanistycznych Akademii Humanitas.
+							</p>
+							<p>
+								Od początku kariery zawodowej jestem związany z praktyką prawniczą, którą rozwijałem jako asystent prawny w kancelarii adwokackiej już od pierwszego semestru studiów. W trakcie kolejnych lat konsekwentnie budowałem doświadczenie zawodowe, koncentrując praktykę na sprawach z zakresu prawa karnego, rodzinnego, cywilnego, gospodarczego oraz prawa pracy. Uczestniczyłem również w licznych konferencjach naukowych, systematycznie poszerzając wiedzę z zakresu dogmatyki prawa. Obsługuję zarówno klientów indywidualnych, jak i przedsiębiorców.
+							</p>
+							<p>
+								Równolegle przez wiele lat pełniłem służbę jako operator numeru alarmowego 112. Doświadczenie to ukształtowało moją zdolność pracy pod presją czasu, podejmowania szybkich decyzji w sytuacjach kryzysowych oraz precyzynej komunikacji w warunkach wysokiej odpowiedzialności. Kompetencje te wykorzystuję w praktyce prawniczej, w szczególności w sprawach wymagających zdecydowanego działania i sprawnej reakcji.
+							</p>
+						</div>
 					</div>
-					<div class="absolute -bottom-10 -left-10 bg-brand-gold p-10 hidden md:block shadow-xl">
-						<span class="text-brand-dark font-serif text-4xl block mb-2">15+</span>
-						<span class="text-brand-dark uppercase tracking-widest text-xs font-bold">Lat doświadczenia</span>
+					<div class="relative">
+						<div class="aspect-[4/5] bg-brand-dark overflow-hidden shadow-2xl border border-brand-gold/20">
+							<img 
+								src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+								alt="Prawnik Klaudiusz Gamza" 
+								class="w-full h-full object-cover opacity-90"
+							/>
+						</div>
+						<div class="absolute -bottom-6 -left-6 bg-brand-gold p-8 hidden md:block shadow-xl">
+							<span class="text-brand-dark font-serif text-2xl block italic leading-none">Klaudiusz Gamza</span>
+							<span class="text-brand-dark uppercase tracking-widest text-[10px] font-bold">Prawnik</span>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- Values -->
-		<section class="bg-gray-50 py-24">
+		<section class="bg-brand-dark py-24 text-white">
 			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl font-serif mb-4">Wartości, którymi się kierujemy</h2>
+					<div class="h-[1px] w-20 bg-brand-gold mx-auto"></div>
+				</div>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-					<div class="bg-white p-10 shadow-sm border border-gray-100 text-center">
+					<div class="text-center">
 						<Shield className="text-brand-gold mx-auto mb-6" size={40} />
-						<h3 class="text-xl font-serif mb-4 text-brand-dark">Etyka zawodowa</h3>
-						<p class="text-gray-600 font-light text-sm">Niezależność, zachowanie tajemnicy adwokackiej oraz przestrzeganie zasad etyki są fundamentem naszej pracy.</p>
+						<h3 class="text-xl font-serif mb-4">Etyka zawodowa</h3>
+						<p class="text-gray-400 font-light text-sm">Niezależność, zachowanie tajemnicy adwokackiej oraz przestrzeganie zasad etyki są fundamentem naszej pracy.</p>
 					</div>
-					<div class="bg-white p-10 shadow-sm border border-gray-100 text-center">
+					<div class="text-center">
 						<Award className="text-brand-gold mx-auto mb-6" size={40} />
-						<h3 class="text-xl font-serif mb-4 text-brand-dark">Najwyższa jakość</h3>
-						<p class="text-gray-600 font-light text-sm">Nieustannie podnosimy nasze kwalifikacje, aby sprostać dynamicznie zmieniającym się przepisom prawa.</p>
+						<h3 class="text-xl font-serif mb-4">Najwyższa jakość</h3>
+						<p class="text-gray-400 font-light text-sm">Nieustannie podnosimy nasze kwalifikacje, aby sprostać dynamicznie zmieniającym się przepisom prawa.</p>
 					</div>
-					<div class="bg-white p-10 shadow-sm border border-gray-100 text-center">
+					<div class="text-center">
 						<Users className="text-brand-gold mx-auto mb-6" size={40} />
-						<h3 class="text-xl font-serif mb-4 text-brand-dark">Relacja z Klientem</h3>
-						<p class="text-gray-600 font-light text-sm">Podstawą naszej współpracy jest wzajemne zaufanie, dyskrecja oraz jasna komunikacja na każdym etapie.</p>
+						<h3 class="text-xl font-serif mb-4">Relacja z Klientem</h3>
+						<p class="text-gray-400 font-light text-sm">Podstawą naszej współpracy jest wzajemne zaufanie, dyskrecja oraz jasna komunikacja na każdym etapie.</p>
 					</div>
 				</div>
 			</div>

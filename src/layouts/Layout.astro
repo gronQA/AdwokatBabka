@@ -6,18 +6,18 @@ interface Props {
 	description?: string;
 }
 
-const { title, description = "Kancelaria Adwokacka Barbara Babka - Profesjonalna pomoc prawna w eleganckim wydaniu." } = Astro.props;
+const { title, description = "BG LEX Kancelaria Adwokacka - Profesjonalna pomoc prawna w eleganckim wydaniu." } = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/AdwokatBabka/favicon.png" />
+		<link rel="icon" type="image/png" href="/BGLex/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title} | Kancelaria Adwokacka Barbara Babka</title>
+		<title>{title ? `${title} | BG LEX Kancelaria Adwokacka` : 'BG LEX Kancelaria Adwokacka'}</title>
 	</head>
 	<body class="min-h-screen flex flex-col">
 		<slot />
