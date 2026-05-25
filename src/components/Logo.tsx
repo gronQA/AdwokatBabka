@@ -5,7 +5,7 @@ const Logo = () => {
     <div className="flex flex-col items-center justify-center font-serif text-brand-gold">
       <div className="mb-1">
         <img 
-          src="/logo.png" 
+          src="/AdwokatBabka/logo.png" 
           alt="Logo Kancelaria" 
           className="h-16 w-auto object-contain"
           onError={(e) => {
