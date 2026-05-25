@@ -55,24 +55,46 @@ import { CheckCircle2, FileText, Scale, MessageCircle } from 'lucide-react';
 		</section>
 
 		<!-- Why Us -->
-		<section class="bg-brand-dark py-20 text-white">
-			<div class="container mx-auto px-4">
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-					<div class="flex items-center gap-4">
-						<CheckCircle2 className="text-brand-gold" size={24} />
-						<span class="text-sm tracking-widest uppercase font-light">Pełna dyskrecja</span>
+		<section class="bg-brand-dark py-24 text-white relative overflow-hidden">
+			<!-- Subtle Background Image -->
+			<div class="absolute inset-0 z-0">
+				<img 
+					src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+					alt="Tło Prawnicze" 
+					class="w-full h-full object-cover opacity-5"
+				/>
+				<div class="absolute inset-0 bg-brand-dark/60"></div>
+			</div>
+
+			<div class="container mx-auto px-4 relative z-10">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+					<div class="flex flex-col items-center text-center gap-4">
+						<div class="w-12 h-12 rounded-full border border-brand-gold/30 flex items-center justify-center mb-2">
+							<CheckCircle2 className="text-brand-gold" size={24} />
+						</div>
+						<span class="text-xs tracking-[0.2em] uppercase font-bold text-brand-gold">Pełna dyskrecja</span>
+						<p class="text-gray-400 text-[10px] uppercase tracking-widest leading-relaxed">Gwarancja tajemnicy zawodowej</p>
 					</div>
-					<div class="flex items-center gap-4">
-						<FileText className="text-brand-gold" size={24} />
-						<span class="text-sm tracking-widest uppercase font-light">Jasne raportowanie</span>
+					<div class="flex flex-col items-center text-center gap-4">
+						<div class="w-12 h-12 rounded-full border border-brand-gold/30 flex items-center justify-center mb-2">
+							<FileText className="text-brand-gold" size={24} />
+						</div>
+						<span class="text-xs tracking-[0.2em] uppercase font-bold text-brand-gold">Jasne raportowanie</span>
+						<p class="text-gray-400 text-[10px] uppercase tracking-widest leading-relaxed">Bieżąca informacja o sprawie</p>
 					</div>
-					<div class="flex items-center gap-4">
-						<Scale className="text-brand-gold" size={24} />
-						<span class="text-sm tracking-widest uppercase font-light">Etyka adwokacka</span>
+					<div class="flex flex-col items-center text-center gap-4">
+						<div class="w-12 h-12 rounded-full border border-brand-gold/30 flex items-center justify-center mb-2">
+							<Scale className="text-brand-gold" size={24} />
+						</div>
+						<span class="text-xs tracking-[0.2em] uppercase font-bold text-brand-gold">Etyka adwokacka</span>
+						<p class="text-gray-400 text-[10px] uppercase tracking-widest leading-relaxed">Zasady godności zawodu</p>
 					</div>
-					<div class="flex items-center gap-4">
-						<MessageCircle className="text-brand-gold" size={24} />
-						<span class="text-sm tracking-widest uppercase font-light">Szybki kontakt</span>
+					<div class="flex flex-col items-center text-center gap-4">
+						<div class="w-12 h-12 rounded-full border border-brand-gold/30 flex items-center justify-center mb-2">
+							<MessageCircle className="text-brand-gold" size={24} />
+						</div>
+						<span class="text-xs tracking-[0.2em] uppercase font-bold text-brand-gold">Szybki kontakt</span>
+						<p class="text-gray-400 text-[10px] uppercase tracking-widest leading-relaxed">Odpowiedź do 24h</p>
 					</div>
 				</div>
 			</div>
